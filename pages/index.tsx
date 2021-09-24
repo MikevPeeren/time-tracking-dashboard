@@ -1,24 +1,26 @@
-import type { NextPage } from 'next'
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.scss'
+import type { NextPage } from "next";
+import Head from "next/head";
+
+import ProfileCard from "../src/components/ProfileCard";
+import TrackingCard from "../src/components/TrackingCard";
+
+import styles from "../styles/Home.module.scss";
 
 const Home: NextPage = () => {
   return (
-    <div className={styles.container}>
+    <div>
       <Head>
         <title>Time Tracking Dashboard</title>
         <meta name="description" content="Time Tracking Dashboard" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.main}>
-        
+      <main>
+        <ProfileCard />
+        <TrackingCard />
       </main>
-
-     
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
