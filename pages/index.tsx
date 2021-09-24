@@ -1,10 +1,8 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 
-import ProfileCard from "../src/components/ProfileCard";
-import TrackingCard from "../src/components/TrackingCard";
-
-import styles from "../styles/Home.module.scss";
+import ProfileCard from "../components/ProfileCard";
+import TrackingCard from "../components/TrackingCard";
 
 const Home: NextPage = () => {
   return (
