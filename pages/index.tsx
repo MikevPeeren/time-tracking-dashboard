@@ -2,7 +2,7 @@ import type { NextPage } from "next";
 import Head from "next/head";
 
 import ProfileCard from "../components/ProfileCard";
-import TrackingCard from "../components/TrackingCard";
+import TrackingCardCollection from "../components/TrackingCardCollection";
 
 const Home: NextPage = () => {
   return (
@@ -13,9 +13,11 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon-32x32.png" />
       </Head>
 
-      <main className="flex h-screen justify-center items-center">
-        <ProfileCard />
-        <TrackingCard />
+      <main>
+        <div className="h-screen flex flex-row justify-center items-center">
+          <ProfileCard />
+          <TrackingCardCollection />
+        </div>
       </main>
     </div>
   );
