@@ -13,7 +13,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon-32x32.png" />
       </Head>
 
-      <main>
+      <main className="flex h-screen justify-center items-center">
         <ProfileCard />
         <TrackingCard />
       </main>
