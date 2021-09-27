@@ -12,10 +12,10 @@ const TrackingCardCollection = (): NextComponentType => {
 
   return (
     <div className="grid grid-cols-3 h-2/4 w-3/5">
-      {data.map((timeTrack) => {
+      {data.map((timeTrack, index) => {
         return (
           <TrackingCard
-            key={timeTrack?.title}
+            key={index}
             title={timeTrack?.title}
             timeFrames={timeTrack?.timeframes}
           />
