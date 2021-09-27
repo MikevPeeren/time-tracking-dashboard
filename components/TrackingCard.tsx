@@ -21,7 +21,11 @@ const iconTypes = {
   "self-care": SELFCARE,
 };
 
-const TrackingCard: NextComponentType = ({ title, timeFrames }) => {
+const TrackingCard: NextComponentType = ({
+  title,
+  timeFrames,
+  timeFrameType,
+}) => {
   const titleFormatted = title.toLowerCase().split(" ").join("-");
 
   const backgroundColor = classNames({
@@ -33,7 +37,8 @@ const TrackingCard: NextComponentType = ({ title, timeFrames }) => {
     "bg-primary-light-orange": titleFormatted === "work",
   });
 
-  console.log(timeFrames);
+  console.log(timeFrames[timeFrameType]);
+
   return (
     <div className="h-3/4 mx-4 rounded-2xl">
       <div
@@ -43,7 +48,7 @@ const TrackingCard: NextComponentType = ({ title, timeFrames }) => {
       </div>
       <div className="flex flex-col bg-secondary-dark-blue rounded-2xl relative bottom-10 z-10 p-6">
         <div className="flex justify-between mt-2 mb-4">
-          <span className="text-white font-light">Work</span>
+          <span className="text-white font-light">{title}</span>
           <Image
             className="right-0"
             src="/icon-ellipsis.svg"
@@ -52,9 +57,11 @@ const TrackingCard: NextComponentType = ({ title, timeFrames }) => {
             alt="Ellipsis"
           />
         </div>
-        <span className="text-white font-light text-6xl">32hrs</span>
+        <span className="text-white font-light text-6xl">
+          {`${timeFrames[timeFrameType]?.current}hrs`}
+        </span>
         <span className="text-secondary-desaturated-blue pb-2">
-          last week - 36hrs
+          {` last week - ${timeFrames[timeFrameType]?.previous}hrs`}
         </span>
       </div>
     </div>

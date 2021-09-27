@@ -4,7 +4,7 @@ import TrackingCard from "./TrackingCard";
 
 import useTimeTrackingData from "../lib/hooks/useTimeTrackingData";
 
-const TrackingCardCollection = (): NextComponentType => {
+const TrackingCardCollection = ({ timeFrameType }): NextComponentType => {
   const { data, isLoading, isError } = useTimeTrackingData();
 
   if (isLoading) return <div>LOADING</div>;
@@ -18,6 +18,7 @@ const TrackingCardCollection = (): NextComponentType => {
             key={index}
             title={timeTrack?.title}
             timeFrames={timeTrack?.timeframes}
+            timeFrameType={timeFrameType}
           />
         );
       })}

@@ -1,9 +1,15 @@
 import type { NextComponentType } from "next";
 
+import { useState } from "react";
+
 import Image from "next/image";
 import profilePic from "../public/image-jeremy.png";
 
-const ProfileCard: NextComponentType = () => {
+const ProfileCard: NextComponentType = ({ handleTimeFrameTypeChange }) => {
+  const [dailyActive, setDailyActive] = useState(false);
+  const [weeklyActive, setWeeklyActive] = useState(true);
+  const [monthlyActive, setMonthlyActive] = useState(false);
+
   return (
     <div className={`h-2/4 w-64`}>
       <div className="flex flex-col bg-secondary-dark-blue h-full rounded-2xl">
@@ -22,9 +28,45 @@ const ProfileCard: NextComponentType = () => {
           </div>
         </div>
         <div className="flex flex-col bg-secondary-dark-blue rounded-b-2xl p-6">
-          <span className="text-secondary-desaturated-blue py-2">Daily</span>
-          <span className="text-white py-2">Weekly</span>
-          <span className="text-secondary-desaturated-blue py-2">Monthly</span>
+          <span
+            className={`${
+              dailyActive ? "text-white" : "text-secondary-desaturated-blue"
+            } py-2 cursor-pointer`}
+            onClick={() => {
+              setDailyActive(true);
+              setWeeklyActive(false);
+              setMonthlyActive(false);
+              handleTimeFrameTypeChange("daily");
+            }}
+          >
+            Daily
+          </span>
+          <span
+            className={`${
+              weeklyActive ? "text-white" : "text-secondary-desaturated-blue"
+            } py-2 cursor-pointer`}
+            onClick={() => {
+              setDailyActive(false);
+              setWeeklyActive(true);
+              setMonthlyActive(false);
+              handleTimeFrameTypeChange("weekly");
+            }}
+          >
+            Weekly
+          </span>
+          <span
+            className={`${
+              monthlyActive ? "text-white" : "text-secondary-desaturated-blue"
+            } py-2 cursor-pointer`}
+            onClick={() => {
+              setDailyActive(false);
+              setWeeklyActive(false);
+              setMonthlyActive(true);
+              handleTimeFrameTypeChange("monthly");
+            }}
+          >
+            Monthly
+          </span>
         </div>
       </div>
     </div>

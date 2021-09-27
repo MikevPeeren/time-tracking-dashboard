@@ -1,10 +1,18 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 
+import { useState } from "react";
+
 import ProfileCard from "../components/ProfileCard";
 import TrackingCardCollection from "../components/TrackingCardCollection";
 
 const Home: NextPage = () => {
+  const [timeFrameType, setTimeFrameType] = useState("weekly");
+
+  const handleTimeFrameTypeChange = (timeFrameType) => {
+    setTimeFrameType(timeFrameType);
+  };
+
   return (
     <div>
       <Head>
@@ -15,8 +23,8 @@ const Home: NextPage = () => {
 
       <main>
         <div className="h-screen flex flex-row justify-center items-center">
-          <ProfileCard />
-          <TrackingCardCollection />
+          <ProfileCard handleTimeFrameTypeChange={handleTimeFrameTypeChange} />
+          <TrackingCardCollection timeFrameType={timeFrameType} />
         </div>
       </main>
     </div>
