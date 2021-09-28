@@ -1,5 +1,7 @@
 import type { NextComponentType } from "next";
 
+import styles from "./TrackingCardCollection.module.scss";
+
 import TrackingCard from "./TrackingCard";
 
 import useTimeTrackingData from "../lib/hooks/useTimeTrackingData";
@@ -11,7 +13,7 @@ const TrackingCardCollection = ({ timeFrameType }): NextComponentType => {
   if (isError) return <div>ERROR</div>;
 
   return (
-    <div className="grid grid-cols-3 h-2/4 w-3/5">
+    <div className={`grid grid-cols-3 ${styles.TrackingCardCollection}`}>
       {data.map((timeTrack, index) => {
         return (
           <TrackingCard

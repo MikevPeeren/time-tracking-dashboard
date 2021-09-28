@@ -3,6 +3,8 @@ import type { NextComponentType } from "next";
 
 import Image from "next/image";
 
+import styles from "./TrackingCard.module.scss";
+
 import classNames from "classnames";
 
 import WORK from "../public/icon-work.svg";
@@ -37,10 +39,8 @@ const TrackingCard: NextComponentType = ({
     "bg-primary-light-orange": titleFormatted === "work",
   });
 
-  console.log(timeFrames[timeFrameType]);
-
   return (
-    <div className="h-3/4 mx-4 rounded-2xl">
+    <div className={`${styles.TrackingCard} mx-4 rounded-2xl`}>
       <div
         className={`flex flex-col items-end h-20 pr-4 rounded-2xl relative ${backgroundColor}`}
       >

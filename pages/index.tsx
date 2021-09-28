@@ -22,7 +22,7 @@ const Home: NextPage = () => {
       </Head>
 
       <main>
-        <div className="h-screen flex flex-row justify-center items-center">
+        <div className="flex flex-row items-center justify-center h-screen">
           <ProfileCard handleTimeFrameTypeChange={handleTimeFrameTypeChange} />
           <TrackingCardCollection timeFrameType={timeFrameType} />
         </div>
