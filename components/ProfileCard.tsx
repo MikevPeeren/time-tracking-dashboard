@@ -14,7 +14,7 @@ const ProfileCard: NextComponentType = ({ handleTimeFrameTypeChange }) => {
 
   return (
     <div
-      className={`h-3/4 md:w-2/3 flex flex-col bg-secondary-dark-blue rounded-2xl mx-4 my-10`}
+      className={`${styles.ProfileCard} md:w-2/3 flex flex-col bg-secondary-dark-blue rounded-2xl mx-4 my-10`}
     >
       <div className="flex flex-row md:flex-col justify-center bg-primary-blue rounded-2xl py-8  md:p-8 relative z-10">
         <Image

@@ -14,7 +14,7 @@ const TrackingCardCollection = ({ timeFrameType }): NextComponentType => {
 
   return (
     <div
-      className={`h-4/5 grid md:grid-cols-3 grid-cols-1 ${styles.TrackingCardCollection}`}
+      className={`grid md:grid-cols-3 grid-cols-1 ${styles.TrackingCardCollection}`}
     >
       {data.map((timeTrack, index) => {
         return (
