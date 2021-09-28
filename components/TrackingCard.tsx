@@ -57,11 +57,11 @@ const TrackingCard: NextComponentType = ({
             alt="Ellipsis"
           />
         </div>
-        <div className="flex flex-col">
-          <span className="text-white font-light text-4xl pr-4 md:text-6xl">
+        <div className="flex flex-col mb-2">
+          <span className="text-white font-light text-4xl pr-4 md:text-5xl">
             {`${timeFrames[timeFrameType]?.current}hrs`}
           </span>
-          <span className="text-secondary-desaturated-blue ">
+          <span className="text-secondary-desaturated-blue">
             {` last week - ${timeFrames[timeFrameType]?.previous}hrs`}
           </span>
         </div>

@@ -1,7 +1,5 @@
 import type { NextComponentType } from "next";
 
-import styles from "./TrackingCardCollection.module.scss";
-
 import TrackingCard from "./TrackingCard";
 
 import useTimeTrackingData from "../lib/hooks/useTimeTrackingData";

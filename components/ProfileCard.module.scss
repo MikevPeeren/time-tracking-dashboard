@@ -1,4 +1,11 @@
 .ProfileCard {
+    @media screen 
+  and (max-width: 375px) {
+  width: 90%;
+  height: 240px;
+}
+
+
   width: 250px;
   height: 520px;
 }

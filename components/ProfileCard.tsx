@@ -14,18 +14,18 @@ const ProfileCard: NextComponentType = ({ handleTimeFrameTypeChange }) => {
 
   return (
     <div
-      className={`${styles.ProfileCard} md:w-2/3 flex flex-col bg-secondary-dark-blue rounded-2xl mx-4 my-10`}
+      className={`${styles.ProfileCard} flex flex-col bg-secondary-dark-blue rounded-2xl mx-4 my-10`}
     >
-      <div className="flex flex-row md:flex-col justify-center bg-primary-blue rounded-2xl py-8  md:p-8 relative z-10">
+      <div className="flex flex-row md:flex-col justify-center md:justify-start items-center md:items-start bg-primary-blue rounded-2xl py-4 md:py-8 px-2 md:p-8 relative z-10">
         <Image
-          className="rounded-full border-2 border-white border-solid mr-2"
+          className="rounded-full border-2 border-white border-solid"
           src={profilePic}
           alt="Picture of the user"
           layout="fixed"
-          width={100}
-          height={100}
+          width={70}
+          height={70}
         />
-        <div className="flex flex-col mx-4 my-4 ">
+        <div className="flex flex-col mx-4 md:mx-0 my-4 ">
           <span className="font-light text-secondary-pale-blue">
             Report for
           </span>
