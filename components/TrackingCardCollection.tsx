@@ -4,16 +4,18 @@ import TrackingCard from "./TrackingCard";
 
 import useTimeTrackingData from "../lib/hooks/useTimeTrackingData";
 
-const TrackingCardCollection = ({ timeFrameType }): NextComponentType => {
+import { ITrackingCardCollection } from "../lib/types";
+
+const TrackingCardCollection: NextComponentType = ({
+  timeFrameType,
+}: ITrackingCardCollection) => {
   const { data, isLoading, isError } = useTimeTrackingData();
 
   if (isLoading) return <div>LOADING</div>;
   if (isError) return <div>ERROR</div>;
 
   return (
-    <div
-      className={`grid md:grid-cols-3 grid-cols-1 ${styles.TrackingCardCollection}`}
-    >
+    <div className={`grid md:grid-cols-3 grid-cols-1`}>
       {data.map((timeTrack, index) => {
         return (
           <TrackingCard

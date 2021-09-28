@@ -14,6 +14,8 @@ import STUDY from "../public/icon-study.svg";
 import SOCIAL from "../public/icon-social.svg";
 import SELFCARE from "../public/icon-self-care.svg";
 
+import { ITrackingCard } from "../lib/types";
+
 const iconTypes = {
   work: WORK,
   play: PLAY,
@@ -27,7 +29,7 @@ const TrackingCard: NextComponentType = ({
   title,
   timeFrames,
   timeFrameType,
-}) => {
+}: ITrackingCard) => {
   const titleFormatted = title.toLowerCase().split(" ").join("-");
 
   const backgroundColor = classNames({

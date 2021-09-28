@@ -7,7 +7,11 @@ import styles from "./ProfileCard.module.scss";
 import Image from "next/image";
 import profilePic from "../public/image-jeremy.png";
 
-const ProfileCard: NextComponentType = ({ handleTimeFrameTypeChange }) => {
+import { IProfileCard } from "../lib/types";
+
+const ProfileCard: NextComponentType = ({
+  handleTimeFrameTypeChange,
+}: IProfileCard) => {
   const [dailyActive, setDailyActive] = useState(false);
   const [weeklyActive, setWeeklyActive] = useState(true);
   const [monthlyActive, setMonthlyActive] = useState(false);
