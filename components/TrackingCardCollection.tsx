@@ -1,4 +1,4 @@
-import type { NextComponentType } from "next";
+import type { NextPage } from "next";
 
 import TrackingCard from "./TrackingCard";
 
@@ -6,9 +6,9 @@ import useTimeTrackingData from "../lib/hooks/useTimeTrackingData";
 
 import { ITrackingCardCollection } from "../lib/types";
 
-const TrackingCardCollection: NextComponentType = ({
+const TrackingCardCollection: NextPage<ITrackingCardCollection> = ({
   timeFrameType,
-}: ITrackingCardCollection) => {
+}) => {
   const { data, isLoading, isError } = useTimeTrackingData();
 
   if (isLoading) return <div>LOADING</div>;

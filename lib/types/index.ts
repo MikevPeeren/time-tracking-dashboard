@@ -1,10 +1,12 @@
 export interface IProfileCard {
-  handleTimeFrameTypeChange: () => Record<string, unknown>;
+  handleTimeFrameTypeChange: (arg0: string) => void;
 }
 
 export interface ITrackingCard {
   title: string;
-  timeFrames: string;
+  timeFrames: {
+    [k: string]: { current: number; previous: number };
+  };
   timeFrameType: string;
 }
 

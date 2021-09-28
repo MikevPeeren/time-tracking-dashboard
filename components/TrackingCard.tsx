@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-import type { NextComponentType } from "next";
+import type { NextPage } from "next";
 
 import Image from "next/image";
 
@@ -16,7 +16,7 @@ import SELFCARE from "../public/icon-self-care.svg";
 
 import { ITrackingCard } from "../lib/types";
 
-const iconTypes = {
+const iconTypes: { [key: string]: string } = {
   work: WORK,
   play: PLAY,
   exercise: EXERCISE,
@@ -25,11 +25,11 @@ const iconTypes = {
   "self-care": SELFCARE,
 };
 
-const TrackingCard: NextComponentType = ({
+const TrackingCard: NextPage<ITrackingCard> = ({
   title,
   timeFrames,
   timeFrameType,
-}: ITrackingCard) => {
+}) => {
   const titleFormatted = title.toLowerCase().split(" ").join("-");
 
   const backgroundColor = classNames({

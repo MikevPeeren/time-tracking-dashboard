@@ -9,8 +9,8 @@ import TrackingCardCollection from "../components/TrackingCardCollection";
 const Home: NextPage = () => {
   const [timeFrameType, setTimeFrameType] = useState("weekly");
 
-  const handleTimeFrameTypeChange = (timeFrameType) => {
-    setTimeFrameType(timeFrameType);
+  const handleTimeFrameTypeChange = (timeFrameType: string): void => {
+    return setTimeFrameType(timeFrameType);
   };
 
   return (

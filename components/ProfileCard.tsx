@@ -1,4 +1,4 @@
-import type { NextComponentType } from "next";
+import type { NextPage } from "next";
 
 import { useState } from "react";
 
@@ -9,9 +9,7 @@ import profilePic from "../public/image-jeremy.png";
 
 import { IProfileCard } from "../lib/types";
 
-const ProfileCard: NextComponentType = ({
-  handleTimeFrameTypeChange,
-}: IProfileCard) => {
+const ProfileCard: NextPage<IProfileCard> = ({ handleTimeFrameTypeChange }) => {
   const [dailyActive, setDailyActive] = useState(false);
   const [weeklyActive, setWeeklyActive] = useState(true);
   const [monthlyActive, setMonthlyActive] = useState(false);
