@@ -14,23 +14,27 @@ const ProfileCard: NextComponentType = ({ handleTimeFrameTypeChange }) => {
 
   return (
     <div
-      className={`${styles.ProfileCard} flex flex-col bg-secondary-dark-blue rounded-2xl mx-4`}
+      className={`h-3/4 md:w-2/3 flex flex-col bg-secondary-dark-blue rounded-2xl mx-4 my-10`}
     >
-      <div className="flex flex-col justify-center bg-primary-blue rounded-2xl p-8 relative z-10">
+      <div className="flex flex-row md:flex-col justify-center bg-primary-blue rounded-2xl py-8  md:p-8 relative z-10">
         <Image
-          className="rounded-full border-2 border-white border-solid"
+          className="rounded-full border-2 border-white border-solid mr-2"
           src={profilePic}
           alt="Picture of the user"
           layout="fixed"
           width={100}
           height={100}
         />
-        <div className="flex flex-col my-8 text-white">
-          <span className="font-light">Report for</span>
-          <span className="text-4xl font-normal">Jeremy Robson</span>
+        <div className="flex flex-col mx-4 my-4 ">
+          <span className="font-light text-secondary-pale-blue">
+            Report for
+          </span>
+          <span className="text-xl md:text-4xl font-normal text-white">
+            Jeremy Robson
+          </span>
         </div>
       </div>
-      <div className="flex flex-col justify-center bg-secondary-dark-blue rounded-b-2xl p-8">
+      <div className="flex flex-row md:flex-col justify-between md:justify-center bg-secondary-dark-blue rounded-b-2xl p-8">
         <span
           className={`${
             dailyActive ? "text-white" : "text-secondary-desaturated-blue"

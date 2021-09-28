@@ -13,7 +13,9 @@ const TrackingCardCollection = ({ timeFrameType }): NextComponentType => {
   if (isError) return <div>ERROR</div>;
 
   return (
-    <div className={`grid grid-cols-3 ${styles.TrackingCardCollection}`}>
+    <div
+      className={`h-4/5 grid md:grid-cols-3 grid-cols-1 ${styles.TrackingCardCollection}`}
+    >
       {data.map((timeTrack, index) => {
         return (
           <TrackingCard

@@ -40,7 +40,7 @@ const TrackingCard: NextComponentType = ({
   });
 
   return (
-    <div className={`${styles.TrackingCard} mx-4 rounded-2xl`}>
+    <div className={`h-2/5 mx-4 rounded-2xl`}>
       <div
         className={`flex flex-col items-end h-20 pr-4 rounded-2xl relative ${backgroundColor}`}
       >
@@ -57,12 +57,14 @@ const TrackingCard: NextComponentType = ({
             alt="Ellipsis"
           />
         </div>
-        <span className="text-white font-light text-6xl">
-          {`${timeFrames[timeFrameType]?.current}hrs`}
-        </span>
-        <span className="text-secondary-desaturated-blue pb-2">
-          {` last week - ${timeFrames[timeFrameType]?.previous}hrs`}
-        </span>
+        <div className="flex-col">
+          <span className="text-white font-light text-4xl pr-4 md:text-6xl">
+            {`${timeFrames[timeFrameType]?.current}hrs`}
+          </span>
+          <span className="text-secondary-desaturated-blue md:pb-2">
+            {` last week - ${timeFrames[timeFrameType]?.previous}hrs`}
+          </span>
+        </div>
       </div>
     </div>
   );
