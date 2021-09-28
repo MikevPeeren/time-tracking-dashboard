@@ -1,11 +1,21 @@
 .ProfileCard {
-    @media screen 
-  and (max-width: 375px) {
-  width: 90%;
-  height: 240px;
-}
+  @media screen and (max-width: 374px) {
+    width: 90%;
+    height: 240px;
+  }
 
+  @media screen and (min-width: 375) and (max-width: 749px) {
+    width: 90%;
+    height: 240px;
+  }
 
-  width: 250px;
-  height: 520px;
+  @media screen and (min-width: 750px) and (max-width: 1439px) {
+    width: 30%;
+    height: 520px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    width: 240px;
+    height: 520px;
+  }
 }

@@ -50,7 +50,9 @@ const TrackingCard: NextPage<ITrackingCard> = ({
       </div>
       <div className="flex flex-col bg-secondary-dark-blue rounded-2xl relative bottom-10 z-10 p-6">
         <div className="flex justify-between mt-2 mb-4">
-          <span className="text-white font-light">{title}</span>
+          <span className="text-white font-light md:text-xs xl:text-base">
+            {title}
+          </span>
           <Image
             className="right-0"
             src="/icon-ellipsis.svg"
@@ -59,11 +61,11 @@ const TrackingCard: NextPage<ITrackingCard> = ({
             alt="Ellipsis"
           />
         </div>
-        <div className="flex flex-col mb-2">
-          <span className="text-white font-light text-4xl pr-4 md:text-5xl">
+        <div className="flex flex-col mb-2 md:mb-6 xl:mb-0">
+          <span className="text-white font-light text-4xl pr-4 md:text-2xl lg:text-2xl xl:text-5xl">
             {`${timeFrames[timeFrameType]?.current}hrs`}
           </span>
-          <span className="text-secondary-desaturated-blue">
+          <span className="text-secondary-desaturated-blue md:text-xs xl:text-base md:h-8">
             {` last week - ${timeFrames[timeFrameType]?.previous}hrs`}
           </span>
         </div>
