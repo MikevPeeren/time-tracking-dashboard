@@ -10,7 +10,6 @@ const TrackingCardCollection: NextPage<ITrackingCardCollection> = ({
   timeFrameData,
   timeFrameType,
 }) => {
-  console.log(timeTrackingJSONData);
   return (
     <div className={`grid md:grid-cols-3 grid-cols-1`}>
       {timeFrameData &&
