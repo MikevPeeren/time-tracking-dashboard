@@ -51,7 +51,7 @@ const TrackingCard: NextPage<ITrackingCard> = ({
         <Image
           src={iconTypes[titleFormatted]}
           alt="time-tracking-icon"
-          preload
+          priority
           placeholder="blur"
           blurDataURL="iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mOUFJOsBwABYQDJy8FxnwAAAABJRU5ErkJggg=="
         />

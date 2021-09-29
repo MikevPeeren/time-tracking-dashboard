@@ -28,7 +28,7 @@ const ProfileCard: NextPage<IProfileCard> = ({ handleTimeFrameTypeChange }) => {
             objectFit="cover"
             width={70}
             height={70}
-            preload
+            priority
             placeholder="blur"
             blurDataURL="iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mOUFJOsBwABYQDJy8FxnwAAAABJRU5ErkJggg=="
           />
