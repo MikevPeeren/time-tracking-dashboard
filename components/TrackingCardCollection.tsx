@@ -10,6 +10,7 @@ const TrackingCardCollection: NextPage<ITrackingCardCollection> = ({
   timeFrameData,
   timeFrameType,
 }) => {
+  console.log(timeTrackingJSONData);
   return (
     <div className={`grid md:grid-cols-3 grid-cols-1`}>
       {timeFrameData &&
@@ -28,7 +29,7 @@ const TrackingCardCollection: NextPage<ITrackingCardCollection> = ({
 };
 
 // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
-export async function getStaticProps() {
+export const getStaticProps = () => {
   return {
     props: {
       data: timeTrackingJSONData,
@@ -37,6 +38,6 @@ export async function getStaticProps() {
       timeFrameType: "weekly",
     },
   };
-}
+};
 
 export default TrackingCardCollection;
