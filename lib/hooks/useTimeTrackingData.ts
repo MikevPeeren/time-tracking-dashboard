@@ -15,7 +15,10 @@ export default function useTimeTrackingData(): {
   isLoading: boolean;
   isError: boolean;
 } {
-  const { data, error } = useSWR(`/api/timeTrackingData`, fetcher);
+  const { data, error } = useSWR(`/api/timeTrackingData`, fetcher, {
+    revalidateIfStale: true,
+    revalidateOnMount: true,
+  });
 
   return {
     data,
