@@ -48,7 +48,13 @@ const TrackingCard: NextPage<ITrackingCard> = ({
       <div
         className={`flex flex-col items-end h-20 pr-4 rounded-2xl relative ${backgroundColor}`}
       >
-        <Image src={iconTypes[titleFormatted]} alt="time-tracking-icon" />
+        <Image
+          src={iconTypes[titleFormatted]}
+          alt="time-tracking-icon"
+          preload
+          placeholder="blur"
+          blurDataURL="iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mOUFJOsBwABYQDJy8FxnwAAAABJRU5ErkJggg=="
+        />
       </div>
       <div className="flex flex-col bg-secondary-dark-blue hover:bg-secondary-desaturated-blue rounded-2xl relative bottom-10 z-10 p-6">
         <div className="flex justify-between items-center mt-2 mb-4">

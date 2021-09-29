@@ -28,6 +28,9 @@ const ProfileCard: NextPage<IProfileCard> = ({ handleTimeFrameTypeChange }) => {
             objectFit="cover"
             width={70}
             height={70}
+            preload
+            placeholder="blur"
+            blurDataURL="iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mOUFJOsBwABYQDJy8FxnwAAAABJRU5ErkJggg=="
           />
         </div>
         <div className="flex flex-col mx-4 md:mx-0 my-4 ">
