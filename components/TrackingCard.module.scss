@@ -1,6 +1,6 @@
 .TrackingCard {
-  &:hover {
-    // opacity: 70%;
+  &:hover .TrackingCard__informationText {
+    @apply text-secondary-pale-blue;
   }
 
   &__ellipsis {
@@ -9,6 +9,10 @@
 
   &__ellipsis:hover {
     fill: white;
+  }
+
+  &__informationText {
+    @apply text-secondary-desaturated-blue;
   }
 
   @media screen and (max-width: 374px) {

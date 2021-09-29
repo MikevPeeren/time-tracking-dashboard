@@ -50,7 +50,7 @@ const TrackingCard: NextPage<ITrackingCard> = ({
       >
         <Image src={iconTypes[titleFormatted]} alt="time-tracking-icon" />
       </div>
-      <div className="flex flex-col bg-secondary-dark-blue rounded-2xl relative bottom-10 z-10 p-6">
+      <div className="flex flex-col bg-secondary-dark-blue hover:bg-secondary-desaturated-blue rounded-2xl relative bottom-10 z-10 p-6">
         <div className="flex justify-between items-center mt-2 mb-4">
           <span className="text-white font-light md:text-xs xl:text-base">
             {title}
@@ -70,11 +70,13 @@ const TrackingCard: NextPage<ITrackingCard> = ({
           </svg>
         </div>
         <div className="flex flex-col mb-2 md:mb-6 xl:mb-0">
-          <span className="text-white font-light text-4xl pr-4 md:text-2xl lg:text-2xl xl:text-5xl">
+          <span className="text-white font-light text-4xl pr-4 md:text-2xl text-opacity-100 lg:text-2xl xl:text-5xl">
             {`${timeFrames[timeFrameType]?.current}hrs`}
           </span>
-          <span className="text-secondary-desaturated-blue  md:text-xs xl:text-base md:h-8">
-            {` last week - ${timeFrames[timeFrameType]?.previous}hrs`}
+          <span
+            className={`${styles.TrackingCard__informationText} md:text-xs xl:text-base md:h-8`}
+          >
+            {` Last Week - ${timeFrames[timeFrameType]?.previous}hrs`}
           </span>
         </div>
       </div>
