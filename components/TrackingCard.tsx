@@ -56,14 +56,14 @@ const TrackingCard: NextPage<ITrackingCard> = ({
           blurDataURL="iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mOUFJOsBwABYQDJy8FxnwAAAABJRU5ErkJggg=="
         />
       </div>
-      <div className="flex flex-col bg-secondary-dark-blue hover:bg-secondary-desaturated-blue rounded-2xl relative bottom-10 z-10 p-6">
+      <div className="flex flex-col bg-secondary-dark-blue hover:bg-secondary-desaturated-blue transition ease-in-out duration-700 rounded-2xl relative bottom-10 z-10 p-6">
         <div className="flex justify-between items-center mt-2 mb-4">
           <span className="text-white font-light md:text-xs xl:text-base">
             {title}
           </span>
           {/* We use a SVG here instead of an Image so that we can change the fill. */}
           <svg
-            className={`${styles.TrackingCard__ellipsis} transition duration-200 ease-in-out hover:-translate-y-1 right-0`}
+            className={`${styles.TrackingCard__ellipsis} transition ease-in-out duration-700 right-0`}
             width="21"
             height="5"
             viewBox="0 0 21 5"
@@ -80,7 +80,7 @@ const TrackingCard: NextPage<ITrackingCard> = ({
             {`${timeFrames[timeFrameType]?.current}hrs`}
           </span>
           <span
-            className={`${styles.TrackingCard__informationText} md:text-xs xl:text-base md:h-8`}
+            className={`${styles.TrackingCard__informationText} transition ease-in-out duration-700 md:text-xs xl:text-base md:h-8`}
           >
             {` Last Week - ${timeFrames[timeFrameType]?.previous}hrs`}
           </span>
