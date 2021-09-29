@@ -11,7 +11,7 @@ const TrackingCardCollection: NextPage<ITrackingCardCollection> = ({
   timeFrameType,
 }) => {
   return (
-    <div className={`grid md:grid-cols-3 grid-cols-1`}>
+    <div className={`contents md:grid md:grid-cols-3 grid-cols-1`}>
       {timeFrameData &&
         timeFrameData.map((timeTrack, index) => {
           return (

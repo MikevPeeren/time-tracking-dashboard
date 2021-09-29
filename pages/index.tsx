@@ -28,7 +28,7 @@ const Home: NextPage = () => {
       </Head>
 
       <main>
-        <div className="flex flex-col md:flex-row md:items-center justify-between md:justify-center h-full md:h-screen my-10 md:my-0 md:mr-4">
+        <div className="flex flex-col md:flex-row items-center justify-between md:justify-center h-full md:h-screen my-10 md:my-0 lg:md-0 md:mr-4">
           <ProfileCard handleTimeFrameTypeChange={handleTimeFrameTypeChange} />
           <TrackingCardCollection
             timeFrameData={data}

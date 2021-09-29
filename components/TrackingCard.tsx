@@ -63,7 +63,7 @@ const TrackingCard: NextPage<ITrackingCard> = ({
           </span>
           {/* We use a SVG here instead of an Image so that we can change the fill. */}
           <svg
-            className={`${styles.TrackingCard__ellipsis} right-0`}
+            className={`${styles.TrackingCard__ellipsis} transition duration-200 ease-in-out hover:-translate-y-1 right-0`}
             width="21"
             height="5"
             viewBox="0 0 21 5"

@@ -44,7 +44,7 @@ const ProfileCard: NextPage<IProfileCard> = ({ handleTimeFrameTypeChange }) => {
         <span
           className={`${
             dailyActive ? "text-white" : "text-secondary-desaturated-blue"
-          } hover:text-white py-2 cursor-pointer`}
+          } hover:text-white transition ease-in-out duration-700 py-2 cursor-pointer`}
           onClick={() => {
             setDailyActive(true);
             setWeeklyActive(false);
@@ -57,7 +57,7 @@ const ProfileCard: NextPage<IProfileCard> = ({ handleTimeFrameTypeChange }) => {
         <span
           className={`${
             weeklyActive ? "text-white" : "text-secondary-desaturated-blue"
-          } hover:text-white py-2 cursor-pointer`}
+          } hover:text-white transition ease-in-out duration-700 py-2 cursor-pointer`}
           onClick={() => {
             setDailyActive(false);
             setWeeklyActive(true);
@@ -70,7 +70,7 @@ const ProfileCard: NextPage<IProfileCard> = ({ handleTimeFrameTypeChange }) => {
         <span
           className={`${
             monthlyActive ? "text-white" : "text-secondary-desaturated-blue"
-          } hover:text-white  pt-2 cursor-pointer`}
+          } hover:text-white transition ease-in-out duration-700 pt-2 cursor-pointer`}
           onClick={() => {
             setDailyActive(false);
             setWeeklyActive(false);
