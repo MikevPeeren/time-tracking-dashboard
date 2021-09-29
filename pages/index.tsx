@@ -16,8 +16,8 @@ const Home: NextPage = () => {
     return setTimeFrameType(timeFrameType);
   };
 
-  if (isLoading) return <div>LOADING</div>;
-  if (isError) return <div>ERROR</div>;
+  if (isLoading) return <div>Future Development: DISPLAY SPINNER HERE</div>;
+  if (isError) return <div>Future Development: DISPLAY ERROR HERE</div>;
 
   return (
     <div>

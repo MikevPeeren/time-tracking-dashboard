@@ -34,9 +34,7 @@ const ProfileCard: NextPage<IProfileCard> = ({ handleTimeFrameTypeChange }) => {
           />
         </div>
         <div className="flex flex-col mx-4 md:mx-0 my-4 ">
-          <span className="font-light text-secondary-pale-blue">
-            Report for
-          </span>
+          <h1 className="font-light text-secondary-pale-blue">Report for</h1>
           <span className="text-xl md:text-4xl font-normal text-white">
             Jeremy Robson
           </span>
