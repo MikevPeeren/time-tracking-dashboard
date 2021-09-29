@@ -6,7 +6,7 @@ export default function useTimeTrackingData(): {
   data: [
     {
       title: string;
-      timeframes: {
+      timeFrames: {
         [k: string]: { current: number; previous: number };
       };
       index: number;
@@ -15,10 +15,7 @@ export default function useTimeTrackingData(): {
   isLoading: boolean;
   isError: boolean;
 } {
-  const { data, error } = useSWR(`/api/timeTrackingData`, fetcher, {
-    revalidateIfStale: true,
-    revalidateOnMount: true,
-  });
+  const { data, error } = useSWR(`/api/timeTrackingData`, fetcher);
 
   return {
     data,

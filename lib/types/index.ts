@@ -11,5 +11,12 @@ export interface ITrackingCard {
 }
 
 export interface ITrackingCardCollection {
+  timeFrameData: [
+    {
+      title: string;
+      timeFrames: { [k: string]: { current: number; previous: number } };
+      index: number;
+    }
+  ];
   timeFrameType: string;
 }
