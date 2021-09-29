@@ -42,30 +42,38 @@ const TrackingCard: NextPage<ITrackingCard> = ({
   });
 
   return (
-    <div className={`${styles.TrackingCard} mx-4 my-4 rounded-2xl`}>
+    <div
+      className={`${styles.TrackingCard} cursor-pointer mx-4 my-4 rounded-2xl`}
+    >
       <div
         className={`flex flex-col items-end h-20 pr-4 rounded-2xl relative ${backgroundColor}`}
       >
         <Image src={iconTypes[titleFormatted]} alt="time-tracking-icon" />
       </div>
       <div className="flex flex-col bg-secondary-dark-blue rounded-2xl relative bottom-10 z-10 p-6">
-        <div className="flex justify-between mt-2 mb-4">
+        <div className="flex justify-between items-center mt-2 mb-4">
           <span className="text-white font-light md:text-xs xl:text-base">
             {title}
           </span>
-          <Image
-            className="right-0"
-            src="/icon-ellipsis.svg"
-            width={21}
-            height={5}
-            alt="Ellipsis"
-          />
+          {/* We use a SVG here instead of an Image so that we can change the fill. */}
+          <svg
+            className={`${styles.TrackingCard__ellipsis} right-0`}
+            width="21"
+            height="5"
+            viewBox="0 0 21 5"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+              fillRule="evenodd"
+            />
+          </svg>
         </div>
         <div className="flex flex-col mb-2 md:mb-6 xl:mb-0">
           <span className="text-white font-light text-4xl pr-4 md:text-2xl lg:text-2xl xl:text-5xl">
             {`${timeFrames[timeFrameType]?.current}hrs`}
           </span>
-          <span className="text-secondary-desaturated-blue md:text-xs xl:text-base md:h-8">
+          <span className="text-secondary-desaturated-blue  md:text-xs xl:text-base md:h-8">
             {` last week - ${timeFrames[timeFrameType]?.previous}hrs`}
           </span>
         </div>

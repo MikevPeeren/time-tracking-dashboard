@@ -1,4 +1,16 @@
 .TrackingCard {
+  &:hover {
+    // opacity: 70%;
+  }
+
+  &__ellipsis {
+    fill: #bbc0ff;
+  }
+
+  &__ellipsis:hover {
+    fill: white;
+  }
+
   @media screen and (max-width: 374px) {
     width: 90%;
     height: 240px;
