@@ -26,8 +26,11 @@ Users should be able to:
 
 ### Screenshot
 
+<img width="1344" alt="Screenshot 2021-10-08 at 13 51 45" src="https://user-images.githubusercontent.com/15649037/136552145-d8dc8999-faf9-47d0-a388-2787e75e5878.png">
+
 ### Links
 
+- Solution URL: [Solution](https://www.frontendmentor.io/solutions/time-tracking-dashboard-with-nextjsreacttailwindcss-mIZKpUql7)
 - Solution URL: [Vercel Webpage](time-tracking-dashboard-peach.vercel.app)
 
 ## My process
@@ -36,12 +39,12 @@ I have started with developing the main overview of the page with CSS for the De
 
 ### Built with
 
+- Sass
+- Desktop-first workflow
 - [Next.js](https://nextjs.org/) - React framework
 - [React](https://reactjs.org/) - JS library
 - [Tailwindcss](https://tailwindcss.com/) - CSS framework
 - [SWR](https://swr.vercel.app/) - React Hooks
-- Sass
-- Desktop-first workflow
 
 ### What I learned
 
