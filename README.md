@@ -39,8 +39,8 @@ I have started with developing the main overview of the page with CSS for the De
 
 ### Built with
 
-- Sass
 - Desktop-first workflow
+- [SASS](https://sass-lang.com/) - Stylesheet language
 - [Next.js](https://nextjs.org/) - React framework
 - [React](https://reactjs.org/) - JS library
 - [Tailwindcss](https://tailwindcss.com/) - CSS framework
