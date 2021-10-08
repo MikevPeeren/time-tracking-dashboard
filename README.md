@@ -45,7 +45,7 @@ I have started with developing the main overview of the page with CSS for the De
 
 ### What I learned
 
-I have learned some more knowledge in with Grid CSS, I also used SWR for the first time as I wanted to test that out. Furthermore I also learned some more TypeScript types related to Next.js
+I have learned some more knowledge with Grid CSS, I also used SWR for the first time as I wanted to test that out. Furthermore I also learned some more TypeScript types related to Next.js
 
 ### Useful resources
 
