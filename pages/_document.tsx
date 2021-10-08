@@ -1,7 +1,14 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 import Document, { Html, Head, Main, NextScript } from "next/document";
 import { ReactElement } from "react";
 
 class MyDocument extends Document {
+  //@ts-ignore
+  static async getInitialProps(ctx) {
+    const initialProps = await Document.getInitialProps(ctx);
+    return { ...initialProps };
+  }
+
   render(): ReactElement {
     return (
       <Html>
