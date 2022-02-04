@@ -19,7 +19,7 @@
     "swr": "^1.2.1"
   },
   "devDependencies": {
-    "@types/react": "17.0.38",
+    "@types/react": "17.0.39",
     "@typescript-eslint/eslint-plugin": "^5.10.2",
     "autoprefixer": "^10.4.2",
     "eslint": "8.8.0",
