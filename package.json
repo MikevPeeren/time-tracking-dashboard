@@ -22,7 +22,7 @@
     "@types/react": "18.0.18",
     "@typescript-eslint/eslint-plugin": "^5.36.2",
     "autoprefixer": "^10.4.8",
-    "eslint": "8.23.0",
+    "eslint": "8.23.1",
     "eslint-config-next": "12.3.0",
     "husky": "^7.0.4",
     "lint-staged": "^12.4.3",
